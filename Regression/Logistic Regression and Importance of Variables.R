@@ -27,8 +27,8 @@ summary(log_mod)
 
 #Plot the logistic model
 plot(response, as.numeric(rg_law)-1, xlim=c(0, 10), xlab = "Log(Violence)", ylab = "Odds of Gun-Law in place", main = "Logistic Regression Plot")
-lines(seq(0, 10, by=0.1), predict(log_reg, data.frame(response=seq(0, 10, by=0.1)), type='response'), col='red')
-points(response, predict(log_reg, type='response'), pch=16, col='red')
+lines(seq(0, 10, by=0.1), predict(log_mod, data.frame(response=seq(0, 10, by=0.1)), type='response'), col='red')
+points(response, predict(log_mod, type='response'), pch=16, col='red')
 abline(h=0.5, lty=3)
 
 
